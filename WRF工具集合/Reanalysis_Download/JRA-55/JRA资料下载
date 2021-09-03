@@ -1,0 +1,23 @@
+#!/bin/bash
+
+ftp -n<<!
+
+open ds.data.jma.go.jp
+
+user jra02948 11111111
+
+binary
+
+cd /data20/JRA-55/Hist/Monthly/anl_p125
+
+lcd /home/QQF/JRA-55
+
+prompt
+
+mget anl_p125_ugrd.*
+
+close
+
+bye
+
+! 
